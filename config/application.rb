@@ -45,6 +45,8 @@ module Errbit
       g.fixture_replacement :fabrication
     end
 
+    config.middleware.use Rack::SslEnforcer, :except => /^\/deploys/
+
     # Enable the mongoid identity map for performance
     Mongoid.identity_map_enabled = true
 
