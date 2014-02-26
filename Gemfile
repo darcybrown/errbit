@@ -6,8 +6,7 @@ gem 'actionmailer', RAILS_VERSION
 gem 'actionpack', RAILS_VERSION
 gem 'railties', RAILS_VERSION
 
-gem 'moped', github: 'mongoid/moped'
-gem 'mongoid', github: 'mongoid/mongoid'
+gem "mongoid", "~> 4.0.0.beta1"
 
 gem 'mongoid_rails_migrations'
 gem 'devise'
