@@ -15,7 +15,7 @@
           %span.environment= deploy.environment
         %td.latest= deploy.created_at.to_s(:micro)
         %td.who= deploy.username
-        %td.message= (deploy.message ? deploy.message.split("\n").join("<br />") : '')
+        %td.message= (deploy.message ? raw(deploy.message.split("\n").join("<br />")) : '')
         %td.repository= deploy.repository
         %td.revision= deploy.short_revision
 
