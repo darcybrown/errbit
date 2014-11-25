@@ -22,7 +22,8 @@ class NotificationServices::SlackService < NotificationService
   end
 
   def url
-    "https://#{subdomain}.slack.com/services/hooks/incoming-webhook?token=#{api_token}"
+    # "https://#{subdomain}.slack.com/services/hooks/incoming-webhook?token=#{api_token}"
+    "https://hooks.slack.com/services/#{api_token}"
   end
 
   def message_for_slack(problem)
